@@ -14,12 +14,28 @@ public class ReverseAString {
 	private static String reverse(String str) {
 		
 		String reverse = " ";
-		for(int i = str.length()-1; i>= 0; i--) {
-			reverse = reverse +str.charAt(i);
+		
+	// using length() and charAt() methods of String along with concatination operation (+)
+//		for(int i = str.length()-1; i>= 0; i--) {
+//			reverse = reverse +str.charAt(i);
+//		}
+//		
+//		
+//		return reverse;
+		
+		// Using Character Array
+		char[] ch = str.toCharArray();
+		int len = ch.length;
+		for(int i = len-1; i>=0; i--) {
+			reverse = reverse+ch[i];
 		}
-		
-		
 		return reverse;
+		
+		
+		// Using String buffer class 
+//		StringBuffer sb = new StringBuffer();
+//		sb.append(str);
+//		System.out.println(sb.reverse());
 		
 	}
 

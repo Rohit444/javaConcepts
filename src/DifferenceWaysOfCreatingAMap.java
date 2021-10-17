@@ -52,7 +52,9 @@ public class DifferenceWaysOfCreatingAMap {
 		System.out.println("=================using Simple Entry map ====================================");
 		Map<String, String> usingEmtryMap = Stream.of(
 
-				new AbstractMap.SimpleEntry<>("Vivek", "Kumar"), new AbstractMap.SimpleEntry<>("Himanshu", "Kumar"))
+				new AbstractMap.SimpleEntry<>("Vivek", "Kumar"), 
+				new AbstractMap.SimpleEntry<>("Himanshu", "Kumar")
+				)
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
 		System.out.println(usingEmtryMap.get("Vivek"));
